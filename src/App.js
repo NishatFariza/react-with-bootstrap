@@ -1,9 +1,10 @@
+import CardGroup from "./components/CardGroup/CardGroup";
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <CardGroup></CardGroup>
     </div>
   );
 }
