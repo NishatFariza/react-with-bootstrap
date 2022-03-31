@@ -1,25 +1,15 @@
-import { useState } from "react";
-import { Button, Modal, Spinner} from "react-bootstrap";
-import CardGroup2 from "./components/CardGroup2/CardGroup2";
-import Modals from "./components/Modals/Modals";
+import React, { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
 
-
-
-function App() {
-
+const Modals = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   return (
-    <div className="App">
-      <h1>Using React Bootstrap</h1>
-      <Button variant="secondary">Primary</Button>
-      <Spinner animation="border" role="status">
-     <span className="visually-hidden">Loading...</span>
-    </Spinner>
-    <CardGroup2></CardGroup2>
-    <>
+    <div>
+      <Modal></Modal>
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
@@ -38,10 +28,8 @@ function App() {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
-    <Modals></Modals>
     </div>
   );
-}
+};
 
-export default App;
+export default Modals;
