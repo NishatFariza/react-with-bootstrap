@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from '../Card/Card';
 
 const CardGroup = () => {
 
@@ -13,7 +14,7 @@ const CardGroup = () => {
             <h2>This is my cards</h2>
             <div className="card-group">
                 {
-                    products.map(product =>)
+                    products.map(product => <Card key={product.id} product={product}></Card>)
                 }
             </div>
         </div>
